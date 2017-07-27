@@ -1,12 +1,25 @@
 'use strict';
 
 module.exports = appInfo => {
-  const config = {};
+    const config = {};
 
-  // should change to your own
-  config.keys = appInfo.name + '_1501125993284_294';
+    config.keys = appInfo.name + '_1501125993284_294';
 
-  // add your config here
+    config.redis = {
+        clients: {
+            first: {
+                port: 6379,
+                host: '127.0.0.1',
+                password: '',
+                db: 0,
+            },
+        }
+    };
 
-  return config;
+    config.mongoose = {
+        url: 'mongodb://127.0.0.1/showcase',
+        options: {}
+    };
+
+    return config;
 };
