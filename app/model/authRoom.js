@@ -3,23 +3,19 @@
 module.exports = app => {
     const mongoose = app.mongoose;
     const AuthRoomSchema = new mongoose.Schema({
-        uuid: String,
-        location: String,
-        apartment_name: String,
-        app_id: String,
-        city: String,
-        company_name: String,
+        auth_id: String,
+        auth_type: Number,
+        client_id: String,
         ctime: {type: Date, default: Date.now},
-        head: String,
-        is_agent: String,
-        is_sign: String,
+        home_id: String,
         mtime: {type: Date, default: Date.now},
-        operator: {
-            id: String,
-            name: String,
-            phone: String
+        permission: {
+            begin: Number,
+            end: Number,
+            status: Number
         },
-        phone: String
+        room_id: String,
+        userid: String
     }, {collection: 'auth_rooms'});
 
     return mongoose.model('AuthRoom', AuthRoomSchema);

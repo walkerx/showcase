@@ -19,7 +19,7 @@ module.exports = app => {
             cur_elec_time: Number,
             home_elemeter_amount: Number,
             home_elemeter_amount_time: Number,
-            home_elemeter_photo: ,
+            home_elemeter_photo: String,
             init_elec: Number,
             init_elec_time: Number,
             overdraft_elec: Number,
