@@ -24,12 +24,12 @@ module.exports = appInfo => {
     };
 
     config.sequelize = {
-        dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
-        database: 'test',
-        host: 'localhost',
+        dialect: 'mysql',
+        database: 'saas',
+        host: '118.190.9.82',
         port: '3306',
         username: 'root',
-        password: '',
+        password: '12345dingdingpage',
     };
 
     return config;

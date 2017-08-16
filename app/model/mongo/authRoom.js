@@ -1,8 +1,8 @@
 'use strict';
-//用户集合
+//蓝牙授权 openApi
 module.exports = app => {
     const mongoose = app.mongoose;
-    const UserSchema = new mongoose.Schema({
+    const AuthRoomSchema = new mongoose.Schema({
         uuid: String,
         location: String,
         apartment_name: String,
@@ -17,10 +17,10 @@ module.exports = app => {
         operator: {
             id: String,
             name: String,
-            phone: Stringser
+            phone: String
         },
         phone: String
-    }, {collection: 'roles'});
+    }, {collection: 'auth_rooms'});
 
-    return mongoose.model('User', UserSchema);
+    return mongoose.model('AuthRoom', AuthRoomSchema);
 };

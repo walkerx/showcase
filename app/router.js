@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = app => {
-  app.get('/', 'home.index');
-  app.resources('devices', '/api/devices', app.controller.devices);
+    require('./router/openApi')(app);
+    // require('./router/admin')(app);
+    app.get('/', 'home.index');
+    // app.resources('devices', '/api/devices', app.controller.devices);
 };

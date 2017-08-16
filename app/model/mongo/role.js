@@ -1,8 +1,8 @@
 'use strict';
-
+//用户集合
 module.exports = app => {
     const mongoose = app.mongoose;
-    const ApplicationSchema = new mongoose.Schema({
+    const UserSchema = new mongoose.Schema({
         uuid: String,
         location: String,
         apartment_name: String,
@@ -20,7 +20,7 @@ module.exports = app => {
             phone: String
         },
         phone: String
-    }, {collection: 'application'});
+    }, {collection: 'roles'});
 
-    return mongoose.model('Application', ApplicationSchema);
+    return mongoose.model('Role', UserSchema);
 };

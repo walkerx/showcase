@@ -1,8 +1,8 @@
 'use strict';
-
+//商户申请
 module.exports = app => {
     const mongoose = app.mongoose;
-    const AuthRoomSchema = new mongoose.Schema({
+    const ApplicationSchema = new mongoose.Schema({
         uuid: String,
         location: String,
         apartment_name: String,
@@ -20,7 +20,7 @@ module.exports = app => {
             phone: String
         },
         phone: String
-    }, {collection: 'auth_rooms'});
+    }, {collection: 'application'});
 
-    return mongoose.model('AuthRoom', AuthRoomSchema);
+    return mongoose.model('Application', ApplicationSchema);
 };
