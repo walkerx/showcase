@@ -18,7 +18,18 @@ module.exports = appInfo => {
 
     config.mongoose = {
         url: 'mongodb://127.0.0.1/showcase',
-        options: {}
+        options: {
+            poolSize: 10
+        }
+    };
+
+    config.sequelize = {
+        dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
+        database: 'test',
+        host: 'localhost',
+        port: '3306',
+        username: 'root',
+        password: '',
     };
 
     return config;
